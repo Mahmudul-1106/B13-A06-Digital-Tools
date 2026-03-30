@@ -26,7 +26,7 @@ const Cart = ({ cart, setCart }) => {
   };
 
   return (
-    <div className=" p-10 max-w-7xl mx-auto">
+    <div className=" sm:p-10  sm:w-10/12 mx-auto">
       <h1 className="text-2xl font-bold">Your Cart</h1>
 
       {cart.length === 0 ? (
@@ -35,10 +35,10 @@ const Cart = ({ cart, setCart }) => {
         </p>
       ) : (
         <>
-          <div className="space-y-5 mt-4  rounded-2xl p-5 shadow-2xl">
+          <div className="space-y-5 sm:mt-4  rounded-2xl p-5 shadow-2xl">
             {cart.map((item) => (
               <div
-                className="flex items-center justify-between bg-base-300 rounded-lg p-3"
+                className="sm:flex items-center justify-between bg-base-300 rounded-lg p-3"
                 key={item.id}
               >
                 <div className="flex  items-center gap-2">

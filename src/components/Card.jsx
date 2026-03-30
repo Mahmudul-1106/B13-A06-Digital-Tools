@@ -21,7 +21,7 @@ const Card = ({ item, cart, setCart }) => {
     toast.success("Item added to cart!");
   };
 
-  console.log(cart);
+  //   console.log(cart);
 
   return (
     <div className="card w-full bg-base-200 shadow-sm">
