@@ -1,12 +1,15 @@
-import React, { use } from "react";
+import React, { use, useState } from "react";
 import Card from "./Card";
+import Cart from "./Cart";
 
-const Cards = ({ getPromise }) => {
+const Cards = ({ getPromise, cart, setCart }) => {
   const data = use(getPromise);
 
-  console.log(data);
+  const [viewProducts, setViewProducts] = useState("products");
+
+  //   console.log(data);
   return (
-    <div className="container mx-auto w-10/12 m-10">
+    <div className="container mx-auto w-10/12 m-20">
       <div className="text-center space-y-4">
         <h2 className="text-5xl font-extrabold">Premium Digital Tools</h2>
         <p>
@@ -16,18 +19,43 @@ const Cards = ({ getPromise }) => {
         </p>
 
         <div className="flex items-center justify-center">
-          <button className="btn bg-linear-to-r from-[#3628AB] to-[#9514FA] text-white">
+          <button
+            onClick={() => setViewProducts("products")}
+            className={
+              viewProducts === "products"
+                ? "btn bg-linear-to-r from-[#3628AB] to-[#9514FA] text-white"
+                : "btn"
+            }
+          >
             Products
           </button>
-          <button className="btn">Cart (2)</button>
+          <button
+            onClick={() => setViewProducts("cart")}
+            className={
+              viewProducts === "products"
+                ? "btn"
+                : "btn bg-linear-to-r from-[#3628AB] to-[#9514FA] text-white"
+            }
+          >
+            Cart ({cart.length})
+          </button>
         </div>
       </div>
 
-      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
-        {data.map((item) => (
-          <Card key={item.id} item={item}></Card>
-        ))}
-      </div>
+      {viewProducts === "products" ? (
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+          {data.map((item) => (
+            <Card
+              key={item.id}
+              item={item}
+              cart={cart}
+              setCart={setCart}
+            ></Card>
+          ))}
+        </div>
+      ) : (
+        <Cart cart={cart} setCart={setCart}></Cart>
+      )}
     </div>
   );
 };
