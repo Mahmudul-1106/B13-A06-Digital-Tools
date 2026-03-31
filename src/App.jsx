@@ -14,14 +14,23 @@ const getPromise = getData();
 
 function App() {
   const [cart, setCart] = useState([]);
+  const [showComponent, setShowComponent] = useState(false);
+
   return (
     <>
       <Navbar cart={cart}></Navbar>
-      <Banner></Banner>
+
+      {!showComponent && <Banner></Banner>}
+
       <Suspense
         fallback={<span className=" loading loading-spinner loading-xl"></span>}
       >
-        <Cards getPromise={getPromise} cart={cart} setCart={setCart}></Cards>
+        <Cards
+          getPromise={getPromise}
+          cart={cart}
+          setCart={setCart}
+          setShowComponent={setShowComponent}
+        ></Cards>
       </Suspense>
 
       <ToastContainer />

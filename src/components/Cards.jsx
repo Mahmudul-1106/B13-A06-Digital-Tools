@@ -2,7 +2,7 @@ import React, { use, useState } from "react";
 import Card from "./Card";
 import Cart from "./Cart";
 
-const Cards = ({ getPromise, cart, setCart }) => {
+const Cards = ({ getPromise, cart, setCart, setShowComponent }) => {
   const data = use(getPromise);
 
   const [viewProducts, setViewProducts] = useState("products");
@@ -20,7 +20,10 @@ const Cards = ({ getPromise, cart, setCart }) => {
 
         <div className="flex items-center justify-center">
           <button
-            onClick={() => setViewProducts("products")}
+            onClick={() => {
+              setViewProducts("products");
+              setShowComponent(false);
+            }}
             className={
               viewProducts === "products"
                 ? "btn bg-linear-to-r from-[#3628AB] to-[#9514FA] text-white"
@@ -30,7 +33,10 @@ const Cards = ({ getPromise, cart, setCart }) => {
             Products
           </button>
           <button
-            onClick={() => setViewProducts("cart")}
+            onClick={() => {
+              setViewProducts("cart");
+              setShowComponent(true);
+            }}
             className={
               viewProducts === "products"
                 ? "btn"
