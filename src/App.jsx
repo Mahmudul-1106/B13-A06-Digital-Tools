@@ -5,6 +5,7 @@ import Cards from "./components/Cards";
 import { ToastContainer } from "react-toastify";
 import Banner from "./components/Banner";
 import Pricing from "./components/Pricing";
+import Footer from "./components/Footer";
 
 const getData = async () => {
   const res = await fetch("/data.json");
@@ -34,7 +35,8 @@ function App() {
         ></Cards>
       </Suspense>
 
-      <Pricing></Pricing>
+      {!showComponent && <Pricing></Pricing>}
+      {!showComponent && <Footer></Footer>}
 
       <ToastContainer />
     </>

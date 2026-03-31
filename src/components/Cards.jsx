@@ -18,7 +18,7 @@ const Cards = ({ getPromise, cart, setCart, setShowComponent }) => {
           to boost your productivity and creativity.
         </p>
 
-        <div className="flex items-center justify-center">
+        <div className="flex items-center justify-center mb-10">
           <button
             onClick={() => {
               setViewProducts("products");
@@ -49,7 +49,7 @@ const Cards = ({ getPromise, cart, setCart, setShowComponent }) => {
       </div>
 
       {viewProducts === "products" ? (
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
+        <div className="grid mx-auto md:grid-cols-2 lg:grid-cols-3 gap-6 mt-5">
           {data.map((item) => (
             <Card
               key={item.id}
