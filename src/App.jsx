@@ -3,6 +3,7 @@ import "./App.css";
 import Navbar from "./components/Navbar";
 import Cards from "./components/Cards";
 import { ToastContainer } from "react-toastify";
+import Banner from "./components/Banner";
 
 const getData = async () => {
   const res = await fetch("/data.json");
@@ -16,6 +17,7 @@ function App() {
   return (
     <>
       <Navbar cart={cart}></Navbar>
+      <Banner></Banner>
       <Suspense
         fallback={<span className=" loading loading-spinner loading-xl"></span>}
       >

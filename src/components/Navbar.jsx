@@ -4,7 +4,7 @@ import logo from "../assets/logo.svg";
 const Navbar = ({ cart }) => {
   return (
     <div className=" ">
-      <div className="navbar flex justify-around bg-base-200  shadow-sm fixed top-0 z-50 ">
+      <div className=" navbar flex flex-col md:flex-row justify-around bg-base-200  shadow-sm fixed top-0 z-50 ">
         <div className="">
           <a className="btn btn-ghost text-xl">
             <img src={logo} alt="" />
@@ -12,7 +12,7 @@ const Navbar = ({ cart }) => {
         </div>
 
         <div>
-          <ul className="menu menu-vertical lg:menu-horizontal bg-base-200 rounded-box">
+          <ul className="menu flex-wrap menu-horizontal bg-base-200 rounded-box">
             <li>
               <a>Products</a>
             </li>
