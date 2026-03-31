@@ -8,7 +8,7 @@ import Pricing from "./components/Pricing";
 import Footer from "./components/Footer";
 
 const getData = async () => {
-  const res = await fetch("/data.json");
+  const res = await fetch("./data.json");
   return res.json();
 };
 
