@@ -6,7 +6,15 @@ import start from "../assets/rocket.png";
 const Pricing = () => {
   return (
     <div className=" ">
+      {/* Get started section */}
       <div className="bg-base-200 py-20 ">
+        <div className=" mx-auto text-center mb-10 space-y-3">
+          <h1 className="text-4xl font-extrabold">Get Started in 3 Steps</h1>
+          <p className="text-[#627382] ">
+            Start using premium digital tools in minutes, not hours.
+          </p>
+        </div>
+
         <div className="w-10/12  mx-auto grid grid-cols-1 md:grid-cols-3 gap-5">
           <div className=" bg-[#FFF] p-6 rounded-2xl ">
             <div className="flex justify-end">
@@ -68,14 +76,15 @@ const Pricing = () => {
         </div>
       </div>
 
-      <div className="w-10/12 mx-auto text-center mb-10 space-y-3">
+      {/* Pricing section */}
+      <div className="w-10/12 mx-auto text-center mt-20 mb-10 space-y-3">
         <h1 className="text-4xl font-extrabold">Simple, Transparent Pricing</h1>
         <p className="text-[#627382] ">
           Choose the plan that fits your needs. Upgrade or downgrade anytime.
         </p>
       </div>
 
-      <div className="w-10/12 mx-auto gap-5 grid grid-cols-1 md:grid-cols-3">
+      <div className="mb-20 w-10/12 mx-auto gap-5 grid grid-cols-1 md:grid-cols-3">
         <div className="card w-full bg-base-200  text-[#627382] shadow-sm">
           <div className="card-body relative">
             <div className="flex flex-col">
