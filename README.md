@@ -1,16 +1,20 @@
-# React + Vite
+Project Name: B13-A06-Digital-Tools
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Description : A responsive digital tools marketplace built with React and Tailwind CSS. Users can browse various tools, view details, and add them to a cart for selection. The project demonstrates component-based architecture, state management, dynamic UI rendering, and modern design using DaisyUI.
 
-Currently, two official plugins are available:
+Technologies Used:
+    -> React.js
+    -> Tailwind CSS, DaisyUI
+    -> JavaScript (ES6+)
+    -> React-Toastify (NPM Package)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+Features:
 
-## React Compiler
+1. Interactive Tool Browsing
+   Users can explore a variety of digital tools with a clean and responsive UI, making it easy to view details and compare options.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+2. Cart & Selection System
+   Users can add tools to a cart and manage their selected items dynamically, improving usability and user experience.
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+3. Modern UI with React & Tailwind
+   Built using React, Tailwind CSS, and DaisyUI, the project offers a fast, component-based structure with a visually appealing and responsive design.

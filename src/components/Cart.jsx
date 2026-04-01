@@ -26,7 +26,7 @@ const Cart = ({ cart, setCart }) => {
   };
 
   return (
-    <div className=" sm:p-10  sm:w-10/12 mx-auto">
+    <div className=" sm:p-5  sm:w-10/12 mx-auto">
       <h1 className="text-2xl font-bold">Your Cart</h1>
 
       {cart.length === 0 ? (
